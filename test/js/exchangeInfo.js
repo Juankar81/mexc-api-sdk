@@ -4,5 +4,5 @@ const client = new Mexc.Spot()
 client.config.apiKey = "your apiKey"
 client.config.apiSecret = "your apiSecret"
 
-const singleRes = client.exchangeInfo({ symbol: "BTCUSDT" })
+const singleRes = client.exchangeInfo({ symbol: "BOBERUSDT" })
 console.log(singleRes)
