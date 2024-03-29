@@ -3,7 +3,7 @@ const Mexc = require('../../dist/js/package')
 const client = new Mexc.Spot()
 client.config.apiKey = "mx0vgl790qpkEB4Qk2"
 client.config.apiSecret = "63d6bdff7ad1470c87cd492684fb45a8"
-const symbol = "SHXUSDT" 
+const symbol = "SHX/USDT" 
 
 let n = 1
 let bought = 0
@@ -44,7 +44,8 @@ let sellValue = 0
 
      //COMPRAR NTD
      while (bought  == 0 ){
-        const buyPrice = client.newOrder(symbol, "BUY", "MARKET", { quoteOrderQty: 30})        
+        const buyPrice = client.newOrder(symbol, "BUY", "MARKET", { quoteOrderQty: 30}) 
+        console.log(buyPrice) 
         if (buyPrice == 400) {
             console.log("No existe ese symbol")
             }
